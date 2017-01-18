@@ -28,7 +28,6 @@ if [ ! -f $CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar ]; then
 fi
 
 CLASSPATH=$CMAKEIFY_JAR:$CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar
-ls cmakeify-downloads
 
 # Attempt to set APP_HOME
 # Resolve links: $0 may be a link
@@ -183,6 +182,5 @@ if [[ "$(uname)" == "Darwin" ]] && [[ "$HOME" == "$PWD" ]]; then
   cd "$(dirname "$0")"
 fi
 
-echo exec "$JAVACMD" "${JVM_OPTS[@]}" -classpath "$CLASSPATH" com.jomofisher.cmakeify.Cmakeify "$@"
 exec "$JAVACMD" "${JVM_OPTS[@]}" -classpath "$CLASSPATH" com.jomofisher.cmakeify.Cmakeify "$@"
 
