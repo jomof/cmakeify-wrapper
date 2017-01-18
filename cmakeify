@@ -13,6 +13,7 @@ if [ ! -d "cmakeify-downloads" ]; then
 fi
 
 curl -o cmakeify-downloads/cmakeify-run https://raw.githubusercontent.com/jomof/cmakeify-wrapper/master/cmakeify-$CMAKEIFY_CHANNEL &> cmakeify-downloads/download-cmakeify-run
+chmod +x ./cmakeify-downloads/cmakeify-run
 ./cmakeify-downloads/cmakeify-run
 
 
