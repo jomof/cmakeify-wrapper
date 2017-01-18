@@ -10,7 +10,6 @@
 CMAKEIFY_DOWNLOADS=cmakeify-downloads
 CMAKEIFY_VERSION=alpha-0.0.3
 CMAKEIFY_JAR=$CMAKEIFY_DOWNLOADS/cmakeify-$CMAKEIFY_VERSION.jar
-CLASSPATH=$CMAKEIFY_JAR
 
 if [ ! -d $CMAKEIFY_DOWNLOADS ]; then
     mkdir $CMAKEIFY_DOWNLOADS
@@ -28,7 +27,7 @@ if [ ! -f $CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar ]; then
     wget $CMAKEIFY_REMOTE_JAR -O $CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar &> $CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar.log
 fi
 
-CLASSPATH=$CLASSPATH:$CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar
+CLASSPATH=$CMAKEIFY_DOWNLOADS
 ls cmakeify-downloads
 
 # Attempt to set APP_HOME
