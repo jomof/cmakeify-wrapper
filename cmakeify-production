@@ -18,7 +18,7 @@ fi
 if [ ! -f $CMAKEIFY_JAR ]; then
     CMAKEIFY_REMOTE_JAR=https://github.com/jomof/cmakeify/releases/download/$CMAKEIFY_VERSION/cmakeify-$CMAKEIFY_VERSION.jar
     echo Downloading $CMAKEIFY_REMOTE_JAR
-    wget $CMAKEIFY:_REMOTE_JAR -O $CMAKEIFY_JAR &> $CMAKEIFY_DOWNLOADS/download-cmakeify.jar.log
+    wget $CMAKEIFY_REMOTE_JAR -O $CMAKEIFY_JAR &> $CMAKEIFY_DOWNLOADS/download-cmakeify.jar.log
 fi
 
 if [ ! -f $CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar ]; then
