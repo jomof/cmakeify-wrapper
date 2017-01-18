@@ -27,7 +27,7 @@ if [ ! -f $CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar ]; then
     wget $CMAKEIFY_REMOTE_JAR -O $CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar &> $CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar.log
 fi
 
-CLASSPATH=$CMAKEIFY_JAR
+CLASSPATH=$CMAKEIFY_JAR:$CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar
 ls cmakeify-downloads
 
 # Attempt to set APP_HOME
