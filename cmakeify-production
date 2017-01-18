@@ -10,6 +10,7 @@
 CMAKEIFY_DOWNLOADS=cmakeify-downloads
 CMAKEIFY_VERSION=alpha-0.0.3
 CMAKEIFY_JAR=$CMAKEIFY_DOWNLOADS/cmakeify-$CMAKEIFY_VERSION.jar
+CLASSPATH=$CMAKEIFY_JAR
 
 if [ ! -d $CMAKEIFY_DOWNLOADS ]; then
     mkdir $CMAKEIFY_DOWNLOADS
@@ -18,10 +19,15 @@ fi
 if [ ! -f $CMAKEIFY_JAR ]; then
     CMAKEIFY_REMOTE_JAR=https://github.com/jomof/cmakeify/releases/download/$CMAKEIFY_VERSION/cmakeify-$CMAKEIFY_VERSION.jar
     echo Downloading $CMAKEIFY_REMOTE_JAR
-    wget $CMAKEIFY_REMOTE_JAR -O $CMAKEIFY_JAR &> $CMAKEIFY_DOWNLOADS/download-cmakeify.jar.log
+    wget $CMAKEIFY:_REMOTE_JAR -O $CMAKEIFY_JAR &> $CMAKEIFY_DOWNLOADS/download-cmakeify.jar.log
 fi
 
-
+if [ ! -f $CMAKEIFY_JAR ]; then
+    CMAKEIFY_REMOTE_JAR=https://search.maven.org/remotecontent?filepath=org/yaml/snakeyaml/1.17/snakeyaml-1.17.jar
+    echo Downloading $CMAKEIFY_REMOTE_JAR
+    wget $CMAKEIFY:_REMOTE_JAR -O $CMAKEIFY_JAR &> $CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar.log
+fi
+CLASSPATH=$CMAKEIFY_JAR:$CMAKEIFY_DOWNLOADS/snakeyaml-1.17.jar
 
 # Attempt to set APP_HOME
 # Resolve links: $0 may be a link
@@ -81,7 +87,7 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=$CMAKEIFY_JAR
+
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
