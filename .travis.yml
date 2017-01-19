@@ -1,2 +1,2 @@
 script:
-    - "./cmakeify-production"
+    - ./cmakeify-production --dump
