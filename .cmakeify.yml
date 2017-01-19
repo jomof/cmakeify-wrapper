@@ -1,0 +1,4 @@
+target: [windows, linux, android]
+compiler: [gcc, clang]
+gcc:
+  versions: [4.9.0, 6.3.0]
