@@ -1,6 +1,6 @@
 cache:
   directories:
-  - ./.cmakeify
+    - ./.cmakeify
  script:
     - ./cmakeify-production --dump
     - ./cmakeify-production
