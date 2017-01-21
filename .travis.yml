@@ -1,4 +1,4 @@
 script:
     - ./cmakeify-production --dump
     - ./cmakeify-production
-    - .cmakeify/build.sh
+    - ./.cmakeify/build.sh
