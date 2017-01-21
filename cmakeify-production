@@ -183,7 +183,7 @@ if [[ "$(uname)" == "Darwin" ]] && [[ "$HOME" == "$PWD" ]]; then
 fi
 
 exec "$JAVACMD" "${JVM_OPTS[@]}" -classpath "$CLASSPATH" com.jomofisher.cmakeify.CMakeify "$@"
-echo chmod +x ./.cmakeify/build.sh
+echo Making ./.cmakeify/build.sh executable
 chmod +x ./.cmakeify/build.sh
 ls ./.cmakeify
 
