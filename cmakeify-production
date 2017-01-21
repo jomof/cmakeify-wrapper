@@ -7,12 +7,12 @@
 ##############################################################################
 
 ## Download jars and dependencies
-CMAKEIFY_DOWNLOADS=cmakeify-downloads
+CMAKEIFY_DOWNLOADS=.cmakeify/jars
 CMAKEIFY_VERSION=alpha-0.0.6
 CMAKEIFY_JAR=$CMAKEIFY_DOWNLOADS/cmakeify-$CMAKEIFY_VERSION.jar
 
 if [ ! -d $CMAKEIFY_DOWNLOADS ]; then
-    mkdir $CMAKEIFY_DOWNLOADS
+    mkdir -p $CMAKEIFY_DOWNLOADS
 fi
 
 if [ ! -f $CMAKEIFY_JAR ]; then
