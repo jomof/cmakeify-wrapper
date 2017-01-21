@@ -189,6 +189,6 @@ fi
 
 "$JAVACMD" "${JVM_OPTS[@]}" -classpath "$CLASSPATH" com.jomofisher.cmakeify.CMakeify "$@"
 chmod +x ./.cmakeify/build.sh
-#.cmakeify/build.sh
+.cmakeify/build.sh
 
 
